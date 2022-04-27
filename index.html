@@ -232,12 +232,13 @@ img{
         <div class="container">
             <div class="form">
                 <h1 id="head">NO____!</h1>
+                <form action="">
                     <div class="inputBx">
                         <input type="text" id="goal" autocomplete="off" required>
                         <span>Set Goal</span>
                     </div>
                     <div class="inputBx">
-                        <input type="number" id="time" required>
+                        <input type="number" id="time" min="0" step="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
                         <span>Set Time</span>
                     </div>
                     <div class="inputBx">
@@ -245,6 +246,7 @@ img{
                         <input type="submit" value="Pause" id="pause">
                         <input type="submit" value="Stop" id="stop">
                     </div>
+                </form>
             </div>
             <div id="app" style="display: none;"></div>
         </div>
