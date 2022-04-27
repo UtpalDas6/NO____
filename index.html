@@ -23,6 +23,10 @@ body{
     background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+audio {
+    width: 300px;
+    height: 30px;
+}
 img{
     width: 32px;
 }
@@ -231,10 +235,13 @@ img{
         <div class="circle"></div>
         <div class="container">
             <div class="form">
+              <audio id="audio_id" controls loop="loop" autoplay="true" src="dots.mp3">
+              </audio>
                 <h1 id="head">NO____!</h1>
+
                     <div class="inputBx">
                         <input type="text" id="goal" autocomplete="off" required>
-                        <span>Set Goal</span>
+                        <span>Say no to</span>
                     </div>
                     <div class="inputBx">
                         <input type="number" id="time" min="0" step="1" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required>
@@ -251,7 +258,7 @@ img{
     </div>
     <!-- <div id="app"></div> -->
     <script>
-        // Credit: Mateusz Rybczonec
+// Credit: Mateusz Rybczonec
 document.getElementById('pause').style.display="none";
 document.getElementById('stop').style.display="none";
 const FULL_DASH_ARRAY = 283;
