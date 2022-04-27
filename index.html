@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #e7b93c, #ad7b1d);
+}
+img{
+    width: 32px;
+}
+.mainContainer{
+    position: relative;
+}
+.mainContainer .circle{
+    position: absolute;
+    box-shadow: 10px 10px 30px rgb(0 0 0 /46%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 20% 20%, rgb(119, 0, 255) 0%, rgb(83, 0, 139) 65%, rgb(0, 0, 71) 100%);
+}
+.mainContainer .circle:nth-child(1){
+    width: 100px;
+    height: 100px;
+    top: -15px;
+    right: -45px;
+}
+.mainContainer .circle:nth-child(2){
+    width: 130px;
+    height: 130px;
+    top: 105px;
+    left: -127px;
+    z-index: 2;
+}
+.mainContainer .circle:nth-child(3){
+    width: 60px;
+    height: 60px;
+    bottom: 85px;
+    right: -30px;
+    z-index: 2;
+}
+.mainContainer .circle:nth-child(4){
+    width: 70px;
+    height: 70px;
+    bottom: 35px;
+    left: -30px;
+    z-index: 2;
+}
+.mainContainer .circle:nth-child(5){
+    width: 50px;
+    height: 50px;
+    top: -15px;
+    left: -27px;
+}
+.mainContainer .circle:nth-child(6){
+    width: 85px;
+    height: 85px;
+    top: 165px;
+    right: -107px;
+}
+.container{
+    position: relative;
+    padding: 50px;
+    width: 260px;
+    min-height: 380px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+}
+.container::after{
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border-radius: 20px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 2%);
+}
+.form h1{
+    letter-spacing: 2px;
+    margin: 0px 0px 40px 10px;
+}
+.form .inputBx{
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+}
+.form .inputBx input{
+    width: 80%;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 10px 8x 40px;
+    border-radius: 22px;
+    font-size: 16px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.form .inputBx img{
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    transform: scale(0.4);
+    filter: invert(1);
+}
+.form .inputBx input[type=submit]{
+    background: #fff;
+    color: #111;
+    max-width: 100px;
+    padding: 8px 10px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
+    border: 0.3px solid rgba(255, 255, 255, 0.582);
+}
+.form .inputBx input[type=submit]:hover{
+    background: linear-gradient(115deg, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.25));
+    color: #fff;
+}
+.form .inputBx span{
+    position: absolute;
+    left: 30px;
+    display: inline-block;
+    pointer-events: none;
+}
+.form .inputBx input:focus ~ span,
+.form .inputBx input:valid ~ span{
+    transform: translateX(-30px) translateY(-33px);
+    font-size: 12px;
+}
+.form p{
+    font-size: 13px;
+    margin-top: 5px;
+}
+.form p a{
+    color: #fff;
+    font-size: 12px;
+}
+.form p a:hover{
+    color: #000000;
+}
+  
+  .base-timer {
+    position: relative;
+    width: 235px;
+    height: 235px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 235px;
+    height: 235px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+  }
+    </style>
+    
+    <title>NO_______</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="container">
+            <div class="form">
+                <h1 id="head">NO____!</h1>
+                <form action="">
+                    <div class="inputBx">
+                        <input type="text" id="goal" autocomplete="off" required>
+                        <span>Set Goal</span>
+                    </div>
+                    <div class="inputBx">
+                        <input type="number" id="time" required>
+                        <span>Set Time</span>
+                    </div>
+                    <div class="inputBx">
+                        <input type="submit" value="Begin" id="resume">
+                        <input type="submit" value="Pause" id="pause">
+                        <input type="submit" value="Stop" id="stop">
+                    </div>
+                </form>
+            </div>
+            <div id="app" style="display: none;"></div>
+        </div>
+    </div>
+    <!-- <div id="app"></div> -->
+    <script>
+        // Credit: Mateusz Rybczonec
+document.getElementById('pause').style.display="none";
+document.getElementById('stop').style.display="none";
+const FULL_DASH_ARRAY = 283;
+const WARNING_THRESHOLD = 10;
+const ALERT_THRESHOLD = 5;
+
+const COLOR_CODES = {
+  info: {
+    color: "green"
+  },
+  warning: {
+    color: "orange",
+    threshold: WARNING_THRESHOLD
+  },
+  alert: {
+    color: "red",
+    threshold: ALERT_THRESHOLD
+  }
+};
+
+let TIME_LIMIT = 30;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+let remainingPathColor = COLOR_CODES.info.color;
+
+document.getElementById("app").innerHTML = `
+<div class="base-timer">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <g class="base-timer__circle">
+      <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
+      <path
+        id="base-timer-path-remaining"
+        stroke-dasharray="283"
+        class="base-timer__path-remaining ${remainingPathColor}"
+        d="
+          M 50, 50
+          m -45, 0
+          a 45,45 0 1,0 90,0
+          a 45,45 0 1,0 -90,0
+        "
+      ></path>
+    </g>
+  </svg>
+  <span id="base-timer-label" class="base-timer__label">${formatTime(
+    timeLeft
+  )}</span>
+</div>
+`;
+document.getElementById("stop").onclick=function(){window.location.reload();};
+document.getElementById("pause").onclick=function(){clearInterval(timerInterval);};
+document.getElementById("resume").onclick=function(){
+    TIME_LIMIT=Number(document.getElementById('time').value);
+    document.getElementById('head').innerHTML = "NO " + document.getElementById('goal').value+'!';
+    var x = document.getElementsByClassName('inputBx');
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    document.getElementById('app').style.display="block";
+    startTimer();};
+//startTimer();
+
+function onTimesUp() {
+  clearInterval(timerInterval);
+  window.location.reload();
+}
+
+function startTimer() {
+  timerInterval = setInterval(() => {
+    timePassed = timePassed += 1;
+    timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(
+      timeLeft
+    );
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+  }, 1000);
+}
+
+function formatTime(time) {
+  const minutes = Math.floor(time / 60);
+  let seconds = time % 60;
+
+  if (seconds < 10) {
+    seconds = `0${seconds}`;
+  }
+
+  return `${minutes}:${seconds}`;
+}
+
+function setRemainingPathColor(timeLeft) {
+  const { alert, warning, info } = COLOR_CODES;
+  if (timeLeft <= alert.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(warning.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(alert.color);
+  } else if (timeLeft <= warning.threshold) {
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.remove(info.color);
+    document
+      .getElementById("base-timer-path-remaining")
+      .classList.add(warning.color);
+  }
+}
+
+function calculateTimeFraction() {
+  const rawTimeFraction = timeLeft / TIME_LIMIT;
+  return rawTimeFraction - (1 / TIME_LIMIT) * (1 - rawTimeFraction);
+}
+
+function setCircleDasharray() {
+  const circleDasharray = `${(
+    calculateTimeFraction() * FULL_DASH_ARRAY
+  ).toFixed(0)} 283`;
+  document
+    .getElementById("base-timer-path-remaining")
+    .setAttribute("stroke-dasharray", circleDasharray);
+}
+
+    </script>
+</body>
+
+</html>
