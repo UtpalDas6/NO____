@@ -18,7 +18,10 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom right, #e7b93c, #ad7b1d);
+    background: #ee0979;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 img{
     width: 32px;
@@ -102,6 +105,7 @@ img{
     margin-bottom: 30px;
 }
 .form .inputBx input{
+    text-align: center;
     width: 80%;
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -270,7 +274,7 @@ const COLOR_CODES = {
   }
 };
 
-let TIME_LIMIT = 30;
+let TIME_LIMIT = Number(document.getElementById('time').value);
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -278,7 +282,7 @@ let remainingPathColor = COLOR_CODES.info.color;
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
-  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
     <g class="base-timer__circle">
       <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
       <path
