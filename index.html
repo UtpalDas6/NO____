@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 *{
     margin: 0;
     padding: 0;
     transition: all 0.5s;
-    font-family: "Poppins", monospace;
+    font-family: "Poppins", sans-serif;
 }
 body{
     color: #fff;
@@ -215,6 +216,9 @@ img{
     <title>NO_______</title>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -228,7 +232,6 @@ img{
         <div class="container">
             <div class="form">
                 <h1 id="head">NO____!</h1>
-                <form action="">
                     <div class="inputBx">
                         <input type="text" id="goal" autocomplete="off" required>
                         <span>Set Goal</span>
@@ -242,7 +245,6 @@ img{
                         <input type="submit" value="Pause" id="pause">
                         <input type="submit" value="Stop" id="stop">
                     </div>
-                </form>
             </div>
             <div id="app" style="display: none;"></div>
         </div>
@@ -278,7 +280,7 @@ let remainingPathColor = COLOR_CODES.info.color;
 
 document.getElementById("app").innerHTML = `
 <div class="base-timer">
-  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="https://www.w3.org/2000/svg">
+  <svg class="base-timer__svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
     <g class="base-timer__circle">
       <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"></circle>
       <path
